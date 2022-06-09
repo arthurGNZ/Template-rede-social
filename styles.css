@@ -399,6 +399,7 @@ input {
 .aceitar:hover{
   background-color: #e0e0e0;
   color: #666666;
+  cursor: pointer;
 }
 .recusar{
   display: flex;
@@ -412,6 +413,7 @@ input {
 .recusar:hover{
   background-color: #e0e0e0;
   color: #666666;
+  cursor: pointer;
 }
 .footer{
   display: flex;
