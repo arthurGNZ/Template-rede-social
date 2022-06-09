@@ -413,3 +413,21 @@ input {
   background-color: #e0e0e0;
   color: #666666;
 }
+.footer{
+  display: flex;
+  align-items: center;
+  background-color: #435761;
+  height: 80px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+.powered{
+  display: flex;
+  align-items: center;
+  background-color: #303e45;
+  height: 50px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+}
