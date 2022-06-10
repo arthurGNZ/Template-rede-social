@@ -1,9 +1,16 @@
+/* Tirar as margens padrão do navegador*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+/* Cabeçalho: container para o cabeçalho, organizando seus elementos em space-between, position: sticky para ficar fixo na página. 
+Topicos_Cabecalho: Container que fica dentro do cabecalho para separar os itens corretamente no space-between.
+item-cabecalho: Itens do cabeçalho (ícones e textos) que ficarão no cabeçalho, com a cor deles sendo branca e possuindo um preenchimento de 12px por 24px.
+item-cabeçalho:first-of-type: já que o primeiro item do cabeçalho possuí uma cor de fundo diferente e um preenchimento (padding) diferente foi criado esse elemento, nele será mudado a cor do fundo(background-color: #404c54), a fonte padrão será open sans e, caso não seja encontrada, será a sans-serif(font-family: 'Open Sans', sans-serif).
+avatar: deixar um 'quadrado' de 23px por 23px e colocar suas bordas com uma curva de 50% para virar um círculo, que será usado para estilizar a imagem circular no canto superior direito.
+margemicones: dar uma margem superior aos ícones para ficarem alinhados verticalmente.
+*/
 .cabecalho {
   display: flex;
   justify-content: space-between;
@@ -38,7 +45,9 @@
 .margemicones {
   margin-top: 45%;
 }
-
+/*item-cabeçalho:hover: mudar a cor dos elementos para preto e do fundo para braco e deixar o mouse como pointer quando passar o mouse por cima(hover)
+.item-cabeçalho:first-of-type:hover,.item-cabeçalho:last-of-type:hover: dar estilo diferente ao passar o mouse no primeiro e último elemento mudando cor dos elementos e do fundo
+*/
 .item-cabeçalho:hover {
   background-color: white;
   color: black;
@@ -72,12 +81,19 @@
 .item-cabeçalho:hover .notificacao {
   color: white;
 }
-
+/* Corpo: alinhar o corpo como space-around e alinhar os elementos no centro, além de deixar uma largura de 60% o valor da página.
+coluna-direita: flex para alinhar elementos da direita.
+profile: coluna do perfil, com borda curvada em 5px, uma sombra cinza e margem inferior de 30px.
+profile i e profile hr: estilizar textos e hr.
+h4: personalizar textos do h4 com margem de 10px por 0 fonte open sans e "peso" leve
+txtProfile: modificar o texto na aba profile, dando margem a esquerda, usando a fonte open sans com tamanho de 15px
+*/
 .corpo {
   display: flex;
-  justify-content: flex-start;
-  width: 90%;
+  justify-content: space-around;
+  width: 60%;
   margin: 1.5% auto;
+  align-self: center;
 }
 
 .coluna-direita {
@@ -123,7 +139,10 @@ h4 {
   font-weight: normal;
   width: 300px;
 }
-
+/* dropdown: posição relativa, para o menu do dropdown
+features-menu: sem display para quando o dropdown ter o mouse passado sobre ele dicar com display flex e posição absoluta, assim 'aparecendo' na tela do usuário
+features-menu p: personalizar o p do features menu com fonte opens sans e 20px de tamanho
+*/ 
 .dropdown {
   position: relative;
 }
