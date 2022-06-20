@@ -1,9 +1,11 @@
+/*Alunos: Arthur Henrique Paulini Grasnievicz e Otavio Luiz Rebelatto*/
 /* Tirar as margens padrão do navegador*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Cabeçalho: container para o cabeçalho, organizando seus elementos em space-between, position: sticky para ficar fixo na página. 
 Topicos_Cabecalho: Container que fica dentro do cabecalho para separar os itens corretamente no space-between.
 item-cabecalho: Itens do cabeçalho (ícones e textos) que ficarão no cabeçalho, com a cor deles sendo branca e possuindo um preenchimento de 12px por 24px.
@@ -45,6 +47,7 @@ margemicones: dar uma margem superior aos ícones para ficarem alinhados vertica
 .margemicones {
   margin-top: 45%;
 }
+
 /*item-cabeçalho:hover: mudar a cor dos elementos para preto e do fundo para braco e deixar o mouse como pointer quando passar o mouse por cima(hover)
 .item-cabeçalho:first-of-type:hover,.item-cabeçalho:last-of-type:hover: dar estilo diferente ao passar o mouse no primeiro e último elemento mudando cor dos elementos e do fundo
 */
@@ -81,6 +84,7 @@ margemicones: dar uma margem superior aos ícones para ficarem alinhados vertica
 .item-cabeçalho:hover .notificacao {
   color: white;
 }
+
 /* Corpo: alinhar o corpo como space-around e alinhar os elementos no centro, além de deixar uma largura de 60% o valor da página.
 coluna-direita: flex para alinhar elementos da direita.
 profile: coluna do perfil, com borda curvada em 5px, uma sombra cinza e margem inferior de 30px.
@@ -139,10 +143,12 @@ h4 {
   font-weight: normal;
   width: 300px;
 }
+
 /* dropdown: posição relativa, para o menu do dropdown
 features-menu: sem display para quando o dropdown ter o mouse passado sobre ele dicar com display flex e posição absoluta, assim 'aparecendo' na tela do usuário
-features-menu p: personalizar o p do features menu com fonte opens sans e 20px de tamanho
-*/ 
+features-menu p: personalizar o p do features menu com fonte opens sans, 20px de tamanho, uma margem de 10px por 15px e com o peso da fonte "leve"
+dropdown:hover .features-menu: quando passar o mouse pelo container dropdown, deixar o features-menu (que possuia display: none), com display: flex, sendo uma flexbox que irá conter os itens do dropdown
+*/
 .dropdown {
   position: relative;
 }
@@ -169,6 +175,12 @@ features-menu p: personalizar o p do features menu com fonte opens sans e 20px d
   width: 320px;
 }
 
+/* secaoMy: container do lado esquerdo do corpo da página
+itemMy: itens que estarão dentro da secaoMy, mudando a cor do fundo, fonte, tamanho e cor da fonte 
+itemMy:hover: para quando passar o mouse sobre um itemMy, mudar o cor do fundo, do conteúdo e deixar o cursor como pointer
+interesses/interesses-grid: container da aba dos interesses, com flex-wrap: wrap para "quebrar" a linha quando chegar no fim do container, border-radius para deixar a borda arredondadas
+itemGrid: itens que vão estar no container com o tamanho de fonte, cor e margem dos itens
+*/
 .secaoMy {
   display: flex;
   flex-direction: column;
@@ -220,6 +232,12 @@ features-menu p: personalizar o p do features menu com fonte opens sans e 20px d
   font-weight: normal;
 }
 
+/* coluna-meio: coluna do meio possui display flex e distribuirá seus itens em uma coluna
+aba-post: container que irá ter o local para realizar posts, distribuidos em colunas, com o conteúdo alinhado no começo (flex-start), sobre na caixa(box-shaddow)
+h3: mudar textos da tag h3, com margem de 10px, e a fonte sendo segoe ui, com peso normal, tamanho de 16px e a cor #a5a5a5
+form: para mudar a estilo do formulário, deixando-o com uma margem esquerda de 40px, e uma inferior de 10px, largura de 850px, preenchimento de 8px por 16px e se "auto alinhar" no centro
+input: mudar o estilo da aba para inserir o texto, deixando a sua largura em 90%, sua fonte sendo a open sans com tamanho de 15px
+*/
 .coluna-meio {
   display: flex;
   flex-direction: column;
@@ -261,6 +279,14 @@ input {
   font-size: 15px;
 }
 
+/*botao: container para os botões presentes no site, com preenchimento de 8px por 12px, cor de fundo #607d8b, margem esquerda de 10px e margem inferior de 10px
+postar: largura de 90px, para deixar a largura do botão postar nesse tamanho
+postar:hover: cor de fundo #cccccc, cor preto e cursor como pointer quando passar por cima do botão
+post: container que vai ter os posts feitos, com display: flex, distribuído em coluna alinhadas pelo começo, com largura de 800px e margem inferior de 30px
+conteudo-post: conteúdo que irá ter no post, com margem de 16px
+post-info: alinhar informações do post, como horário em que foi feito, usuário e avatar como display: flex alinhado em space-between(espaço entre eles)
+postador: div que contém ícone de quem fez o post e o nome de quem postou
+*/
 .botao {
   padding: 8px 12px;
   background-color: #607d8b;
@@ -310,6 +336,15 @@ input {
   font-weight: lighter;
 }
 
+/*texto-post: texto do post, com fonte open sans de 15px, com peso leve e margem de 15px por 0px
+foto: flex-box que vai alinhar as fotos no post, alinhado horizontalmente no centro e verticalmente no fim
+foto-pequena: abas dos post que vão ter fotos pequenas, com largura de 275px, altura de 180px e margem de 0px 0px 16px 10%
+reacoes: container que vai receber os botões de like e comment
+like: mudar a largura da classe botao para 80px e margem a esquerda de 0px
+comment: mudar a largura da classe botao para 120px, e cor de fundo #4d636f
+like:hover: mudar a cor do fundo para #cccccc cor preta e cursor como pointer para quando passar sobre o botão like
+comment:hover: mudar a cor do fundo para #cccccc cor preta e cursor como pointer para quando passar sobre o botão comment
+*/
 .texto-post {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
@@ -358,6 +393,13 @@ input {
   cursor: pointer;
 }
 
+/*coluna-direita: flex-box da coluna da direita que vai organizar seus itens em coluna
+eventos: container dos eventos, organizando os items em coluna, alinhando os itens no centro, margem inferior de 30px, preenchimento de 10px por 15px
+titulo: titulo da aba eventos, com fonte de 15px, da família open sans e margem superior de 10px
+dia: texto do dia do evento, co fonte open sans e margem de 15px por 0pxs
+botao-info: botao de info da aba eventos, centralizando seus itens, largura de 200px, margem inferior de 5px, cor de fundo #dfe5e8
+botao-info:hover:  deixar a cor de fundo #cccccc e o cursor: pointer quando passar por cima do botao-info
+*/
 .coluna-direita {
   display: flex;
   flex-direction: column;
@@ -384,7 +426,8 @@ input {
   font-family: 'Open Sans', sans-serif;
   margin: 15px 0px;
 }
-.botao-info{
+
+.botao-info {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -393,12 +436,18 @@ input {
   margin-bottom: 5px;
 }
 
-.botao-info:hover{
+.botao-info:hover {
   background-color: #cccccc;
   cursor: pointer;
 }
 
-.pedidoAmizade{
+/*pedidoAmizade: container que vai conter o pedido de amizade, alinhar os itens no centro e justificar eles non espaço entre eles, cor de fundo #dfe5e8, largura de 200px e margem inferior de 5px
+aceitar: botão de aceitar o pedido de amizade, com largura de 50% e altura de 38px, cor de fundo #94cf96 e cor dos itens branca, alinhando os itens no centro
+aceitar:hover: mudar cor do fundo para #e0e0e0, cor do conteúdo #666666 e o cursor como pointer
+recusar: botão de recusar o pedido de amizade, com largura de 50% e altura de 100%, cor de fundo #f88e86 e cor dos itens branca, alinhando os itens no centro
+recusar:hover: mudar cor do fundo para #e0e0e0, cor do conteúdo #666666 e o cursor como pointer
+*/
+.pedidoAmizade {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -406,7 +455,8 @@ input {
   width: 200px;
   margin-bottom: 5px;
 }
-.aceitar{
+
+.aceitar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -415,12 +465,14 @@ input {
   height: 38px;
   color: white;
 }
-.aceitar:hover{
+
+.aceitar:hover {
   background-color: #e0e0e0;
   color: #666666;
   cursor: pointer;
 }
-.recusar{
+
+.recusar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -429,12 +481,17 @@ input {
   background-color: #f88e86;
   color: white;
 }
-.recusar:hover{
+
+.recusar:hover {
   background-color: #e0e0e0;
   color: #666666;
   cursor: pointer;
 }
-.footer{
+
+/*footer: rodapé com display flex, alinhado os itens no centro, com a cor do fundo #435761, cor branca, altura de 80px, fonte open sans de 18px
+powered: aba que ficar sob o rodapé, com display flex, itens alinhados no centro, cor de fundo #303e45, altura de 50px, fonte open sans de 15px
+*/
+.footer {
   display: flex;
   align-items: center;
   background-color: #435761;
@@ -443,7 +500,8 @@ input {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
-.powered{
+
+.powered {
   display: flex;
   align-items: center;
   background-color: #303e45;
